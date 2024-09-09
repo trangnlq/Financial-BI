@@ -1,0 +1,127 @@
+--create schema datn;
+
+create table ee_company(
+exchange varchar(30), 
+industry nvarchar(300), 
+companyType varchar(30), 
+noShareHolders int, 
+foreignPercent decimal(12,4), 
+outstandingShare decimal(12,4), 
+issueShare decimal(12,4), 
+establishedYear int, 
+noEmployees int, 
+stockRating decimal(12,4), 
+deltaInWeek decimal(12,4), 
+deltaInMonth decimal(12,4), 
+deltaInYear decimal(12,4), 
+shortName nvarchar(300), 
+website varchar(300),
+industryID int, 
+industryIDv2 varchar(30),
+ticker varchar(3)
+);
+
+create table ee_balance(
+quarter int, 
+year int, 
+short_asset int, 
+cash int, 
+short_invest int, 
+short_receivable int, 
+inventory int, 
+long_asset int, 
+fixed_asset int, 
+asset int, 
+debt int, 
+short_debt int, 
+long_debt int, 
+equity int, 
+capital int, 
+other_debt int, 
+un_distributed_income int, 
+minor_share_holder_profit int, 
+payable int, 
+ticker varchar(3)
+)
+
+create table ee_cashflow(
+quarter int, 
+year int, 
+invest_cost int, 
+from_invest int, 
+from_financial int, 
+from_sale int, 
+free_cash_flow float, 
+ticker varchar(3)
+)
+
+create table ee_income(
+quarter int, 
+year int, 
+revenue int, 
+year_revenue_growth float, 
+quarter_revenue_growth float, 
+cost_of_good_sold int, 
+gross_profit int, 
+operation_expense int, 
+operation_profit int, 
+year_operation_profit_growth float, 
+quarter_operation_profit_growth float, 
+interest_expense int, 
+pre_tax_profit int, 
+post_tax_profit int, 
+share_holder_income int, 
+year_share_holder_income_growth float, 
+quarter_share_holder_income_growth float, 
+ebitda float, 
+ticker varchar(3)
+)
+
+create table ee_ratio(ticker varchar(3), 
+yearreport int, 
+lengthreport int, 
+p_on_b bigint, 
+market_capital float, 
+outstanding_share float, 
+p_on_e float, 
+p_on_s float, 
+p_on_cash_flow float, 
+eps float, 
+bvps float, 
+ev_on_ebitda float, 
+gross_profit_margin float, 
+net_profit_margin float, 
+roe float, 
+roic float, 
+roa float, 
+bound_ebit float, 
+ebitda bigint, 
+ebit bigint, 
+dividend_yield float, 
+current_ratio float, 
+cash_ratio float, 
+quick_ratio float, 
+interest_coverage float, 
+financial_leverage float, 
+asset_turnover float, 
+fixed_asset_turnover float, 
+days_sales_outstanding float, 
+days_inventory_outstanding float, 
+days_payable_outstanding float, 
+cash_cycle float, 
+inventory_turnover float, 
+st_and_lt_borrowings_on_equity float, 
+debt_on_equity float, 
+fixed_asset_to_equity float, 
+owners_equity_on_charter_capital float
+)
+
+create table ee_price(
+time datetime,
+open_price float,
+high_price float,
+low_price float,
+close_price float,
+volumn float,
+ticker varchar(3)
+)

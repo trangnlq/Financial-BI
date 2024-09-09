@@ -1,0 +1,4 @@
+Chương trình gồm 3 file:
+1. create table ee.sql: tập mã nguồn SQL để tạo bảng vùng tạm trên SQL Server
+2. load_to_db_ee.ipynb: tập mã nguồn Python trích xuất dữ liệu từ thư viện Vnstock và đổ dữ liệu vào vùng bảng tạm trong SQL Server
+3. ee datn.pbix: tập tin báo cáo thông minh xây dựng trên Power BI, được kết nối với dữ liệu từ SQL Server để xây dựng kho dữ liệu dạng lược đồ GALAXY.
